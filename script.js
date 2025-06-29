@@ -1,4 +1,4 @@
-let display = document.getElementById("display");
+const display = document.getElementById("display");
 
 function appendValue(value) {
   display.value += value;
@@ -11,7 +11,7 @@ function clearDisplay() {
 function calculate() {
   try {
     display.value = eval(display.value);
-  } catch {
+  } catch (error) {
     display.value = "Error";
   }
 }
